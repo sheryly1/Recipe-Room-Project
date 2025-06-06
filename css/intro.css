@@ -1,0 +1,14 @@
+.introduction{
+    text-align: center;
+}
+.intro-title{
+    font-family: "Alegreya SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.intro-body{
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
