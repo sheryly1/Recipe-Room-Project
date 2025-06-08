@@ -130,6 +130,7 @@ submitButton.addEventListener("click", async (e) => {
 
 
         //Inner HTML to Display Info. 
+        
         filter_result.innerHTML = 
         `
         <div class = "results-top">
