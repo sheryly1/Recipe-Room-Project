@@ -1,0 +1,16 @@
+.substitute-container{
+    padding: 2%;
+    text-align: center; 
+}
+
+.substitute-container h3, h4{
+    font-family: "Alegreya SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.substitute-container p, h5{
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
