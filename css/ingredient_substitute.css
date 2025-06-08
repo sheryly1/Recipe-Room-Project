@@ -1,8 +1,10 @@
-.substitute-container{
+/* Overall Container */ 
+.substitute-container, .substitute-result{
     padding: 2%;
     text-align: center; 
 }
 
+/* Fonts */ 
 .substitute-container h3, h4{
     font-family: "Alegreya SC", serif;
     font-weight: 400;
@@ -13,4 +15,9 @@
     font-family: "Merriweather", serif;
     font-weight: 300;
     font-style: normal;
+}
+
+/* Results Container */ 
+.substitute-result{
+
 }
