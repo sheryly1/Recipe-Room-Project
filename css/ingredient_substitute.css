@@ -3,6 +3,10 @@
     padding: 2%;
     text-align: center; 
 }
+ol {
+  text-align: center;
+  list-style-position: inside;
+}
 
 /* Fonts */ 
 .substitute-container h3, h4{
@@ -17,7 +21,3 @@
     font-style: normal;
 }
 
-/* Results Container */ 
-.substitute-result{
-
-}
