@@ -8,9 +8,10 @@ const getRandomInt = (max) => {
 
 /* ------------ FORM QUERYING ------------ */
 const ingredient_input = document.querySelector('#substitute-input');
+let ingredient = ""; 
 
 ingredient_input.addEventListener("change", (e) => {
-    const ingredient_result = event.target.value.toLowerCase();
+    const ingredient_result = e.target.value.toLowerCase();
     ingredient = ingredient_result;
 });
 
@@ -36,7 +37,7 @@ submitButton.addEventListener("click", async (e) => {
     if (json.status == "failure"){
         substitute_result.innerHTML = 
             `
-            <h3> Sorry we couldn't find a recipe for you </h3>
+            <h3> Sorry we couldn't find a replacement for ${ingredient}. </h3>
             <p> Please double check your spelling and make sure ingredient is not in plural form </p>
             `;
     }else{
@@ -60,7 +61,9 @@ submitButton.addEventListener("click", async (e) => {
         //ID & Image successfully fetched 
         let ingredient_arr = id_json.results[0]; 
         let ingredient_id = ingredient_arr.id; 
-        let ingredient_img = ingredient_arr.image; 
+        //Get correct image format...
+        let imageFile = ingredient_arr.image.replace('.png', '.jpg');
+        let ingredient_img = `https://spoonacular.com/cdn/ingredients_250x250/${imageFile}`;
 
         //API Query
         const ingredient_info = `https://api.spoonacular.com/food/ingredients/${ingredient_id}/information?amount=1&apiKey=${key}`;
@@ -68,9 +71,9 @@ submitButton.addEventListener("click", async (e) => {
         // API Array 
         const info_response = await fetch(ingredient_info); 
         const info_json = await info_response.json(); 
+        let estimated_cost = info_json.estimatedCost; 
+        let aisle = info_json.aisle; 
         console.log(info_json); 
-
-
 
        //Show substitute options
         substitute_result.innerHTML = 
@@ -78,19 +81,15 @@ submitButton.addEventListener("click", async (e) => {
             <div>
                 <div class = "row">
                     <div class = "description col"> 
-                        <h2> ${recipe_name} </h2> 
-                        <h3> Diets: ${recipe_diets} </h3> 
-                        <h3> Time: ${recipe_time} </h3> 
-                        <h3> Servings: ${recipe_servings} </h3> 
-                        <p> ${recipe_description} </p> 
+                        <h2> Substitute[s] for ${ingredient}: </h2> 
+                        <ol> ${substitutes} </ol> 
+                        <p> If these substitutes don't seem good, then you can find ${ingredient} in the ${aisle} aisles at your local supermarket! </p> 
                     </div>
                     <div class = "image col">
-                        <img src = ${recipe_photo}>
+                        <img src = ${ingredient_img}>
                     </div>
                 </div> 
             </div>
-            <h4> ${message} </h4> 
-            <ol> ${substitutes} </ol> 
             `; 
     }
 });
