@@ -1,12 +1,40 @@
+/*
+Primary: Soft Terracotta or Warm Brown (#B85C38 or #7F5539)
+
+Secondary: Creamy Beige (#F5F0E6)
+
+Accent: Olive Green (#8A9A5B) or Sage (#9CAF88)
+
+Neutral: Light Gray (#F7F7F7) and Dark Charcoal (#333333)
+*/
+
 /* Overall Container */ 
+
+html, body {
+  height: 100%;
+  margin: 0;  
+  background-color: #A27B5C;
+}
+
+.main-content{
+    min-height: 100vh;
+    margin: auto 5%;
+    padding: 2rem;
+    background-color: #e8e3d5; 
+    box-sizing: border-box;
+}
+
 .substitute-container{
     padding: 2%;
     text-align: center; 
+    
 }
 
-.substitute-result { 
-    padding: 2%;
-    margin-left: 5%;
+.substitute-result, .js_result { 
+    /*padding: 2%;
+    margin-left: 5%;*/
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Fonts */ 
@@ -24,4 +52,15 @@
 
 .image{
     text-align: center;
+}
+
+img{
+    width: 350px;
+    height: auto;
+    padding-left: 5%;
+    background: #fff;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }

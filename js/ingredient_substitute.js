@@ -78,7 +78,7 @@ submitButton.addEventListener("click", async (e) => {
        //Show substitute options
         substitute_result.innerHTML = 
             ` 
-            <div>
+            <div class = "js_result">
                 <div class = "row">
                     <div class = "description col"> 
                         <h2> Substitute[s] for ${ingredient}: </h2> 
