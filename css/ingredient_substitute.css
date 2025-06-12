@@ -33,11 +33,17 @@ html, body {
 .substitute-result, .js_result { 
     /*padding: 2%;
     margin-left: 5%;*/
+    padding-top: 1%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.failure{
+    text-align: center; 
+}
+
 /* Fonts */ 
+/* For Description */ 
 .substitute-container h3, h4{
     font-family: "Alegreya SC", serif;
     font-weight: 400;
@@ -50,6 +56,20 @@ html, body {
     font-style: normal;
 }
 
+/* For Generated Results */ 
+.substitute-result h2{
+    font-family: "Alegreya SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.substitute-result p, ol{
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Images */ 
 .image{
     text-align: center;
 }
