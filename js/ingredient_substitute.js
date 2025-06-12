@@ -7,12 +7,21 @@ const getRandomInt = (max) => {
 
 
 /* ------------ FORM QUERYING ------------ */
+const submitButton = document.querySelector('#submitButton');
 const ingredient_input = document.querySelector('#substitute-input');
 let ingredient = ""; 
 
 ingredient_input.addEventListener("change", (e) => {
     const ingredient_result = e.target.value.toLowerCase();
     ingredient = ingredient_result;
+});
+
+ingredient_input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault(); // Prevent default form submission if in a form
+    ingredient = e.target.value.toLowerCase(); 
+    submitButton.click(); // Simulate button click
+  }
 });
 
 /* ------------ END OF FORM QUERYING ------------ */
@@ -37,8 +46,10 @@ submitButton.addEventListener("click", async (e) => {
     if (json.status == "failure"){
         substitute_result.innerHTML = 
             `
-            <h3> Sorry we couldn't find a replacement for ${ingredient}. </h3>
-            <p> Please double check your spelling and make sure ingredient is not in plural form </p>
+            <div class = "failure"> 
+                <h2> Sorry we couldn't find a replacement for ${ingredient} </h2>
+                <p> Please double check your spelling and make sure ingredient is not in plural form </p>
+            </div> 
             `;
     }else{
         let message = json.message; 
