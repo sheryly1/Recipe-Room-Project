@@ -1,21 +1,45 @@
-.introduction{
-    margin-top: 3%;
+/* Background Img */ 
+.background {
+  background-image: url("../images/cutting_board.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #e8e3d5;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.text-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Alignments */ 
+.intro-words{
+    margin-top: 2%;
     text-align: center;
 }
 
+/* Fonts */ 
 .intro-title{
     font-family: "Alegreya SC", serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     margin-bottom: 1%;
+    font-size: 500%;
 }
 
 .intro-body {
     font-family: "Merriweather", serif;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
     line-height: 2;
     margin-left: 15%;
     margin-right: 15%;
+    font-size: 120%;
 }
 
