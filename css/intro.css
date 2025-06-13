@@ -8,7 +8,7 @@
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   min-height: 100vh;
 }
@@ -26,21 +26,28 @@
 
 /* Fonts */ 
 .intro-title{
-    font-family: "Alegreya SC", serif;
-    font-weight: 500;
-    font-style: normal;
-    margin-bottom: 1%;
-    font-size: 500%;
+  font-family: "Alegreya SC", serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 1%;
+  font-size: 500%;
 }
 
 .intro-body {
-    font-family: "Merriweather", serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 2;
-    margin-left: 15%;
-    margin-right: 15%;
-    font-size: 120%;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 120%;
+}
+
+.btn-text{
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 150%;
 }
 
 /* Collapsible */ 
@@ -58,20 +65,25 @@
   padding: 18px;
   width: 100%;
   border: none;
+  border-radius: 10px;
   text-align: left;
   outline: none;
   font-size: 15px;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.intro-collapse .active, .collapsible:hover {
+
+.collapsible.active, .collapsible:hover {
   background-color: #516457;
 }
 
-/* Style the collapsible content. Note: hidden by default */
+.collapsible.active{
+  border-radius: 10px 10px 0 0 ;
+}
+
 .content {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #516457;
+  border-radius: 0 0 10px 10px;
 }
