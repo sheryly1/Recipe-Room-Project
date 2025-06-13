@@ -4,4 +4,15 @@
 
 .navbar{
     background-color: #6b8573;
+    color: white !important;
+    font-family: "Alegreya SC", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 120%;
+}
+.navbar,
+.navbar a,
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: white !important;
 }
