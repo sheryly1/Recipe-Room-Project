@@ -1,3 +1,13 @@
+/* Introduction */ 
+.introduction .description{
+    background-color: #A27B5C;
+    min-height: 100vh;
+    padding: 2%;
+}
+.introduction .generator{
+    background-color: #e8e3d5;
+    min-height: 100vh;
+}
 
 /*Options*/
 .filter-container{
@@ -34,13 +44,14 @@
     text-align: center;
 }
 
-.filter-container h3, h4{
+/* Fonts */
+.filter-container h3, h4, .introduction h1, h3{
     font-family: "Alegreya SC", serif;
     font-weight: 400;
     font-style: normal;
 }
 
-.filter-container p, h5{
+.filter-container p, h5, li, .introduction p{
     font-family: "Merriweather", serif;
     font-weight: 300;
     font-style: normal;

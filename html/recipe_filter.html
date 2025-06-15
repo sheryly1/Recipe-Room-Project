@@ -11,6 +11,7 @@
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script src="https://kit.fontawesome.com/601e15eee3.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     </head>
 
@@ -31,79 +32,114 @@
             </div>
         </nav>
 
-    <!--Recipe Filter-->
-        <div class = "filter-container">
-            <div class = "filter-desc">
-                <h3 style="font-size:40px;"> Recipe Filter </h3>
-                <p> Fill out your preferences and we'll help you generate a recipe! If something doesn't apply, leave it blank. </p>
+        <!-- Introduction -->
+        <div class = "introduction"> 
+            <div class = "row">
+                <div class = "col-3 description">
+                    <h1> Recipe Filter </h1>
+                    <hr> 
+                    <p> Fill our your preferences and we'll help you generate a recipe! If something doesn't apply, leave it blank. </p>
+                    <div class = "option-description"> 
+                        <h3> Filter Options Explained </h3>
+                        <!--
+                        <ul class="filter-description-list">
+                            <li><strong><i class="fa-solid fa-leaf"></i>Cuisine:</strong> Choose a cultural cuisine like Italian or Thai to narrow your recipe results.</li>
+                            <li><strong>Diet:</strong> Select dietary needs such as vegetarian, vegan, keto, or gluten-free.</li>
+                            <li><strong>Intolerances:</strong> Exclude ingredients that cause allergies (e.g. dairy, peanuts, shellfish).</li>
+                            <li><strong>Meal Type:</strong> Decide whether you're looking for breakfast, lunch, dinner, or a snack.</li>
+                        </ul>
+                        -->
+                        <div class="description-item">
+                            <p><i class="fa-solid fa-receipt"></i> <strong>Cuisine:</strong> Pick a specific cuisine like Italian, Japanese, or Mexican.</p>
+                        </div>
+                        <div class="description-item">
+                            <p><i class="fa-solid fa-shrimp"></i> <strong>Allergies:</strong> Specify what ingredients you are allergic to so the filter can avoid recipes with them. </p>
+                        </div>
+                        <div class="description-item">
+                            <p><i class="fa-solid fa-leaf"></i> <strong>Dietary Restrictions:</strong> Search for meals that fit your needs (ex: vegetarian, vegan, pescatarian)</p>
+                        </div>
+                        <div class="description-item">
+                            <p><i class="fa-solid fa-kitchen-set"></i> <strong>Ingredients:</strong> Include ingredients you want to use and we'll generate a recipe that requires it. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class = "col-9 generator ">
+                    <!--Recipe Filter-->
+                    <div class = "filter-container">
+                        <div class = "filter-desc">
+                            <h3 style="font-size:40px;"> Filter Options </h3>
+                            <!--<p> Fill out your preferences and we'll help you generate a recipe! If something doesn't apply, leave it blank. </p>-->
+                        </div>
+                        <!--Options-->
+                        <section class = "options"> 
+
+                            <!-- Cuisine -->
+                            <div class = "option-form">
+                                <h4 class = "option-header"> Cuisine </h4>
+                                <!--<p class = "option-desc"> What cuisine do you crave today? </p>-->
+                                <input
+                                    id = "cuisine-input"
+                                    class = ""
+                                    type = "text"
+                                    name = "cuisine"
+                                    placeholder = "Ex: French, German, Chinese, etc..."
+                                />
+                                <br>
+                            </div>
+
+                            <!-- Allergies -->
+                            <div class = "option-form">
+                                <h4 class = "option-header"> Allergies </h4>
+                                <!--<p class = "option-desc"> What allergies do you have? </p>-->
+                                <input
+                                    id = "allergies-input"
+                                    class = ""
+                                    type = "text"
+                                    name = "allergies "
+                                    placeholder = "Ex: Eggs, Dairy, Nuts, etc.. "
+                                />
+                                <br>
+                            </div>
+
+                            <!-- Dietary Restrictions -->
+                            <div class = "option-form">
+                                <h4 class = "option-header"> Dietary Restrictions </h4>
+                                <!--<p class = "option-desc"> Do you have a specific diet? </p>-->
+                                <input
+                                    id = "diet-input"
+                                    class = ""
+                                    type = "text"
+                                    name = " diet "
+                                    placeholder = "Ex: Vegan, Vegetarian, Pescatarian, etc..."
+                                />
+                                <br>
+                            </div>
+                            <!-- Ingredients -->
+                            <div class = "option-form">
+                                <h4 class = "option-header"> Ingredients </h4>
+                                <!--<p class = "option-desc"> What ingredients do you have? </p>-->
+                                <input
+                                    id = "ingredients-input"
+                                    class = ""
+                                    type = "text"
+                                    name = "ingredients "
+                                    placeholder = "Ex: Tomato, Cheese, Lettuce, etc..."
+                                />
+                                <br>
+                            </div>
+                        </section>
+
+                        <!-- Button to Submit Responses -->
+                        <div class = "filter-submission">
+                            <button class="submitButton btn btn-success" id="submitButton" style="width:15%; margin-top:1%;"> Generate a Recipe! </button>
+                            <button class="clearButton btn btn-primary" id="clearButton" style="width:5%; margin-top:1%;"> Clear </button>
+                        </div>
+                        <!-- Results of Filter -->
+                        <div class = "filter-result" id = "filter-result">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!--Options-->
-            <section class = "options"> 
-
-                <!-- Cuisine -->
-                <div class = "option-form">
-                    <h4 class = "option-header"> Cuisine </h4>
-                    <p class = "option-desc"> What cuisine do you crave today? </p>
-                    <input
-                        id = "cuisine-input"
-                        class = ""
-                        type = "text"
-                        name = "cuisine"
-                        placeholder = "Ex: French, German, Chinese, etc..."
-                    />
-                    <br>
-                </div>
-
-                <!-- Allergies -->
-                <div class = "option-form">
-                    <h4 class = "option-header"> Allergies </h4>
-                    <p class = "option-desc"> What allergies do you have? </p>
-                    <input
-                        id = "allergies-input"
-                        class = ""
-                        type = "text"
-                        name = "allergies "
-                        placeholder = "Ex: Eggs, Dairy, Nuts, etc.. "
-                    />
-                    <br>
-                </div>
-
-                <!-- Dietary Restrictions -->
-                <div class = "option-form">
-                    <h4 class = "option-header"> Dietary Restrictions </h4>
-                    <p class = "option-desc"> Do you have a specific diet? </p>
-                    <input
-                        id = "diet-input"
-                        class = ""
-                        type = "text"
-                        name = " diet "
-                        placeholder = "Ex: Vegan, Vegetarian, Pescatarian, etc..."
-                    />
-                    <br>
-                </div>
-                <!-- Ingredients -->
-                <div class = "option-form">
-                    <h4 class = "option-header"> Ingredients </h4>
-                    <p class = "option-desc"> What ingredients do you have? </p>
-                    <input
-                        id = "ingredients-input"
-                        class = ""
-                        type = "text"
-                        name = "ingredients "
-                        placeholder = "Ex: Tomato, Cheese, Lettuce, etc..."
-                    />
-                    <br>
-                </div>
-            </section>
-            <!-- Button to Submit Responses -->
-            <div class = "filter-submission">
-                <button class="submitButton btn btn-success" id="submitButton" style="width:10%; margin-top:1%;"> Generate a Recipe! </button>
-                <button class="clearButton btn btn-primary" id="clearButton" style="width:5%; margin-top:1%;"> Clear </button>
-            </div>
-            <!-- Results of Filter -->
-             <div class = "filter-result" id = "filter-result">
-             </div>
-
         </div>
         <!--Scripts-->
         <script src="../js/recipe_filter.js"></script>
