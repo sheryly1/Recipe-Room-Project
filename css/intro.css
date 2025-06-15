@@ -92,7 +92,8 @@
 
 .btn {
   background-color: #6b8573 !important;
-  float: right;
+  color:rgb(191, 191, 191) !important; 
+  float: center;
 }
 .btn:hover{
   background-color: #5c7463 !important;
