@@ -51,7 +51,7 @@
     font-style: normal;
 }
 
-.filter-container p, h5, li, .introduction p{
+.filter-container p, h5, .filter-result li , .introduction p{
     font-family: "Merriweather", serif;
     font-weight: 300;
     font-style: normal;
