@@ -37,7 +37,7 @@
 /* Recipe Filter Specific */
 .code-description .collapsible{
     background-color: #7d9a85 ;
-    color: black;
+    color: black !important; 
     cursor: pointer;
     padding: 10px;
     width: 100%;

@@ -91,7 +91,7 @@ submitButton.addEventListener("click", async (e) => {
             ` 
             <div class = "js_result">
                 <div class = "row">
-                    <div class = "description col"> 
+                    <div class = "result-description col"> 
                         <h2> Substitute[s] for ${ingredient}: </h2> 
                         <ol> ${substitutes} </ol> 
                         <p> If these substitutes don't seem good, then you can find ${ingredient} in the ${aisle} aisles at your local supermarket! </p> 

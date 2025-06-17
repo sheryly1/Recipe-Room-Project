@@ -1,31 +1,33 @@
 /* Overall Container */ 
 
-html, body {
-  height: 100%;
-  margin: 0;  
-  background-color: #A27B5C;
+.introduction .description{
+    background-color: #A27B5C;
+    min-height: 100vh;
+    padding: 2%;
+}
+.introduction .generator{
+    background-color: #e8e3d5;
+    min-height: 100vh;
 }
 
+
 .main-content{
+    background-color: #e8e3d5;
     min-height: 100vh;
-    margin: auto 5%;
-    padding: 2rem;
-    background-color: #e8e3d5; 
-    box-sizing: border-box;
 }
 
 .substitute-container{
     padding: 2%;
     text-align: center; 
-    
 }
 
-.substitute-result, .js_result { 
+.substitute-result, .js_result, .result-description { 
     /*padding: 2%;
     margin-left: 5%;*/
     padding-top: 1%;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: #e8e3d5 !important;
 }
 
 .failure{
@@ -34,26 +36,13 @@ html, body {
 
 /* Fonts */ 
 /* For Description */ 
-.substitute-container h3, h4{
+h1, h2, h3, h4{
     font-family: "Alegreya SC", serif;
-    font-weight: 400;
+    font-weight: 400 !important;
     font-style: normal;
 }
 
-.substitute-container p, h5{
-    font-family: "Merriweather", serif;
-    font-weight: 300;
-    font-style: normal;
-}
-
-/* For Generated Results */ 
-.substitute-result h2{
-    font-family: "Alegreya SC", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.substitute-result p, ol{
+p, h5, ol{
     font-family: "Merriweather", serif;
     font-weight: 300;
     font-style: normal;
